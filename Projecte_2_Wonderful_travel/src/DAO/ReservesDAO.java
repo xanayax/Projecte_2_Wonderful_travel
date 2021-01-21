@@ -53,4 +53,27 @@ public class ReservesDAO {
 			stmt.close();
 		}
 	}
+	
+	
+	public static void deleteReserva(int id) throws SQLException {
+
+		Connection conexion = null;
+		PreparedStatement stmt = null;
+
+		try {
+
+			conexion = Connexio.getConnection();
+			
+			stmt = (PreparedStatement) conexion.prepareStatement("DELETE FROM reserves WHERE id = ?");
+			
+			stmt.setInt(1, id);
+			
+			stmt.executeUpdate();
+
+
+		} finally {
+			conexion.close();
+			stmt.close();
+		}
+	}
 }

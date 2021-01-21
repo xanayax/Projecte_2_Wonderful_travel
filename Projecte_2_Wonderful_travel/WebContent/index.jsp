@@ -11,11 +11,14 @@
 </head>
 <body>
 
+	<h1>Wonderful Travel</h1>
 
 	<form action="InsertarReserva">
 
 		<b><label for="data">Data</label></b> <input type="date" name="data"
-			id="data"><br> <b><label for="pais">Destí</label></b>
+			id="data"><br> 
+		
+		<b><label for="pais">Destí</label></b>
 
 		<!-- input type="pais" name="pais" id="pais"><br> -->
 
@@ -65,7 +68,7 @@
 			<div id="divDins">
 				<div id="brossa">
 
-					<a href="EsborrarReserva"><img src="imatges/brossa.png" width="20" height="25"></a> 
+					<a href="EsborrarReserva?id=${reserva.id}"><img src="imatges/brossa.png" width="20" height="25"></a> 
 
 				</div>
 				${reserva.data}<br> 

@@ -47,6 +47,12 @@ public class Reserva {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	/*public void setId(HttpServletRequest req) {
+		this.id = Integer.parseInt(req.getParameter("id"));
+	}
+	*/
+
 
 
 	public Date getData() {
