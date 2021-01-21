@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -44,17 +44,22 @@
 
 		<!-- cosa con js -->
 
-		<b><label for="nom">Nom</label></b> <input type="text"
-			name="nom_client" id="nom_client"><br> <b><label
-			for="telef">Telèfon</label></b> <input type="tel" name="telefon"
-			id="telefon"><br> <b><label for="numPers">Persones</label></b>
-		<input type="tel" name="num_persones" id="num_persones"><br>
+		<b><label for="nom">Nom</label></b> 
+		<input type="text" name="nom_client" id="nom_client"><br>
+		
+		<b><label for="telef">Telèfon</label></b>
+		<input type="tel" name="telefon" id="telefon"><br>
+		
+		<b><label for="numPers">Persones</label></b> 
+		<input type="number" name="num_persones" id="num_persones"><br>
 
-		<b><label for="preu">Preu</label></b> <input type="text" name="preu"
-			id="preu">&#8364<br> <input type="checkbox"
-			name="descompte" id="descompte"> <b><label
-			for="descompte">Descompte 20%</label></b><br> <input type="submit"
-			name="afegir" value="Afegir">
+		<b><label for="preu">Preu</label></b> 
+		<input type="number" name="preu" id="preu">€<br> 
+		
+		<input type="checkbox" name="descompte" id="descompte">
+		<b><label for="descompte">Descompte 20%</label></b><br> 
+		
+		<input type="submit" name="afegir" value="Afegir">
 
 		<script src="index.js"></script>
 
@@ -76,7 +81,7 @@
 				${reserva.nom_client}<br> 
 				${reserva.telefon}<br>
 				${reserva.num_persones} persones<br> 
-				${reserva.preu}&#8364<br>
+				${reserva.preu}€<br>
 
 				<c:choose>
 					<c:when test="${reserva.pais == 'Alemanya'}">
@@ -180,7 +185,8 @@
 					</c:when>
 
 					<c:otherwise>
-            			No chuta
+            			<img src="imatges/problemas.jpg" class="imgPais" width="400"
+							height="200">
          			</c:otherwise>
 				</c:choose>
 
