@@ -39,8 +39,4 @@ public class Connexio {
 		st = getConnection().createStatement();
     	return st;
     }
-    public static void closeStConn() throws SQLException {
-    	st.close();
-    	conn.close();
-    }
 }

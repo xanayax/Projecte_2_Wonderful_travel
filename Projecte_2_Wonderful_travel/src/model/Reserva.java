@@ -14,7 +14,7 @@ public class Reserva {
 	String nom_client;
 	String telefon;
 	int num_persones;
-	int preu;
+	Float preu;
 	
 	
 	public Reserva(ResultSet rs) throws SQLException {
@@ -24,7 +24,7 @@ public class Reserva {
 		setNom_client(rs.getString("nom_client"));
 		setTelefon(rs.getString("telefon"));
 		setNum_persones(rs.getInt("num_persones"));
-		setPreu(rs.getInt("preu"));
+		setPreu(rs.getFloat("preu"));
 	}
 	
 	
@@ -113,17 +113,17 @@ public class Reserva {
 	}
 
 
-	public int getPreu() {
+	public Float getPreu() {
 		return preu;
 	}
 
 
-	public void setPreu(int preu) {
+	public void setPreu(Float preu) {
 		this.preu = preu;
 	}
 	
 	public void setPreu(HttpServletRequest req) {
-		this.preu = Integer.parseInt(req.getParameter("preu"));
+		this.preu = Float.parseFloat(req.getParameter("preu"));
 	}
 	
 	

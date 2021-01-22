@@ -11,8 +11,8 @@ public class LlistaReserves {
 		
 	}
 	
-	public void addReserva(Reserva c) {
-		llistaReserves.add(c);
+	public void addReserva(Reserva r) {
+		llistaReserves.add(r);
 	}
 	
 	public ArrayList<Reserva> getAllReserves(){

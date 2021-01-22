@@ -1,14 +1,64 @@
 @charset "ISO-8859-1";
 
-* {
-	font-family: Calibri;
+body {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+}
+
+label {
+	margin: 12px 0;
+	color: #8ebf42;
+}
+
+.main-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+}
+
+form {
+	width: 50%;
+	padding: 20px;
+}
+
+fieldset {
+	border: none;
+	border-top: 1px solid #8ebf42;
+}
+
+.account-details, .personal-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.account-details>div, .personal-details>div>div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.account-details>div, .personal-details>div, input, label {
+	width: 100%;
+}
+
+label {
+	padding: 0 5px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+input {
+	padding: 5px;
+	vertical-align: middle;
 }
 
 #divFora {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	padding: 10px;
-	
 }
 
 #divDins {
@@ -22,13 +72,13 @@
 }
 
 .imgPais {
-  position: relative;
-  transform: scale(1);
-  transition: transform .5s;
+	position: relative;
+	transform: scale(1);
+	transition: transform .5s;
 }
 
 .imgPais:hover {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 
-
+/*rellotge*/

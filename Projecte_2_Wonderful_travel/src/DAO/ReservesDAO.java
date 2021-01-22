@@ -43,7 +43,7 @@ public class ReservesDAO {
 			stmt.setString(3, reserva.getNom_client());
 			stmt.setString(4, reserva.getTelefon());
 			stmt.setInt(5, reserva.getNum_persones());
-			stmt.setInt(6, reserva.getPreu());
+			stmt.setFloat(6, reserva.getPreu());
 			
 			stmt.executeUpdate();
 

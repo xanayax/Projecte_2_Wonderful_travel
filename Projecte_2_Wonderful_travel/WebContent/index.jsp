@@ -13,57 +13,53 @@
 
 	<h1>Wonderful Travel</h1>
 
-	<form action="InsertarReserva">
+	<form id="formulari" action="InsertarReserva" onsubmit="validateForm()">
 
 		<b><label for="data">Data</label></b> <input type="date" name="data"
-			id="data"><br> 
+			id="data"><br><br>
 		
 		<b><label for="pais">Destí</label></b>
 
-		<!-- input type="pais" name="pais" id="pais"><br> -->
 
+		<select list="continents" id="continent">
+            <option selected disabled>Continents</option>
+            <option value="Europa">Europa</option> 
+            <option value="Àsia">Àsia</option>
+            <option value="Àfrica">Àfrica</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Amèrica">Amèrica</option>
+        </select>
 
-		<input list="continents" id="continent">
-		<datalist id="continents">
-			<option value="Europa">
-			<option value="Àsia">
-			<option value="Àfrica">
-			<option value="Oceania">
-			<option value="Àmerica">
-		</datalist>
-		<input list="paisos" id="pais" name="pais">
-		<datalist id="paisos">
-			<option value="asd">
-			<option value="ads">
-			<option value="Àasffrica">
-			<option value="israel">
-			<option value="adfsf">
-		</datalist>
-		<br>
+        <select list="paisos" id="pais" name="pais">
+            <option selected="selected">Paisos</option>
+        </select>
+        <br><br>
 
 
 		<!-- cosa con js -->
 
 		<b><label for="nom">Nom</label></b> 
-		<input type="text" name="nom_client" id="nom_client"><br>
+		<input type="text" name="nom_client" id="nom_client"><br><br>
 		
 		<b><label for="telef">Telèfon</label></b>
-		<input type="tel" name="telefon" id="telefon"><br>
+		<input type="tel" name="telefon" id="telefon"><br><br>
 		
 		<b><label for="numPers">Persones</label></b> 
-		<input type="number" name="num_persones" id="num_persones"><br>
+		<input type="number" name="num_persones" id="num_persones"><br><br>
 
 		<b><label for="preu">Preu</label></b> 
-		<input type="number" name="preu" id="preu">€<br> 
+		<input type="number" name="preu" id="preu">€<br><br>
 		
 		<input type="checkbox" name="descompte" id="descompte">
-		<b><label for="descompte">Descompte 20%</label></b><br> 
+		<b><label for="descompte">Descompte 20%</label></b><br><br>
 		
-		<input type="submit" name="afegir" value="Afegir">
+		<input type="submit" name="submit" value="Afegir">
 
 		<script src="index.js"></script>
 
 	</form>
+	
+	 <div id="imatge"></div>
 
 	<a href="MostrarTotesReserves">Càrregar reserves</a>
 	<br>

@@ -38,11 +38,11 @@ public class InsertarReserva extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Date data = Date.valueOf((request.getParameter("data")));
-		String pais = request.getParameter("pais");
+		String[] pais = request.getParameterValues("pais");
 		String nom_client = request.getParameter("nom_client");
 		String telefon = request.getParameter("telefon");
 		int num_persones = Integer.parseInt(request.getParameter("num_persones"));
-		int preu = Integer.parseInt(request.getParameter("preu"));
+		Float preu = Float.parseFloat(request.getParameter("preu"));
 		
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
