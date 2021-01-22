@@ -16,12 +16,12 @@
 	<form id="formulari" action="InsertarReserva" onsubmit="validateForm()">
 
 		<b><label for="data">Data</label></b> <input type="date" name="data"
-			id="data"><br><br>
+			id="data" required><br><br>
 		
 		<b><label for="pais">Destí</label></b>
 
 
-		<select list="continents" id="continent">
+		<select list="continents" id="continent" required>
             <option selected disabled>Continents</option>
             <option value="Europa">Europa</option> 
             <option value="Àsia">Àsia</option>
@@ -30,7 +30,7 @@
             <option value="Amèrica">Amèrica</option>
         </select>
 
-        <select list="paisos" id="pais" name="pais">
+        <select list="paisos" id="pais" name="pais" required>
             <option selected="selected">Paisos</option>
         </select>
         <br><br>
@@ -39,16 +39,16 @@
 		<!-- cosa con js -->
 
 		<b><label for="nom">Nom</label></b> 
-		<input type="text" name="nom_client" id="nom_client"><br><br>
+		<input type="text" name="nom_client" id="nom_client" required><br><br>
 		
 		<b><label for="telef">Telèfon</label></b>
-		<input type="tel" name="telefon" id="telefon"><br><br>
+		<input type="tel" name="telefon" id="telefon" required><br><br>
 		
 		<b><label for="numPers">Persones</label></b> 
-		<input type="number" name="num_persones" id="num_persones"><br><br>
+		<input type="number" name="num_persones" id="num_persones" required><br><br>
 
 		<b><label for="preu">Preu</label></b> 
-		<input type="number" name="preu" id="preu">€<br><br>
+		<input type="number" name="preu" id="preu" required>€<br><br>
 		
 		<input type="checkbox" name="descompte" id="descompte">
 		<b><label for="descompte">Descompte 20%</label></b><br><br>
